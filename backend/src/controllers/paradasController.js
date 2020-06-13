@@ -32,6 +32,5 @@ module.exports = {
             borracharia
         })
         return response.json({ id });
-
     }
 }
