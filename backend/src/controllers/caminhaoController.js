@@ -9,13 +9,28 @@ module.exports = {
 
     async create(request, response) {
         const { latitude, longitude } = request.body;
-        const caminhoneiro = request.headers.authorization;
+        const id_caminhoneiro = request.headers.authorization;
 
         const [ id ] = await database('caminhao').insert({
-            caminhoneiro,
+            id_caminhoneiro,
             latitude,
             longitude,
         });
-        return response.json({ id })
+        return response.json({ id });
+    },
+    
+    async delete(request, response) {
+        const { id } = request.params;
+        const id_caminhoneiro = request.headers.authorization;
+        
+        const caminhao = database('caminhao')
+            .where('id', id)
+            .select('id_caminhoneiro')
+            .first()
+
+        if(caminhao != id_caminhoneiro) {
+            return 
+        }
+        await database('caminhoneiro').where('id', id).delete();
     }
 };

@@ -10,7 +10,7 @@ module.exports = {
     async create(request, response) {
         const { nome, data_nascimento, telefone } = request.body;
 
-        const [id] = await database('caminhoneiro').insert({
+        const [ id ] = await database('caminhoneiro').insert({
             nome,
             data_nascimento,
             telefone
