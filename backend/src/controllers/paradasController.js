@@ -32,5 +32,11 @@ module.exports = {
             borracharia
         })
         return response.json({ id });
+    },
+    
+    async index(request, response) {
+        const paradas = await database('pontodeparada').select('*');
+
+        return response.json({paradas})
     }
 }

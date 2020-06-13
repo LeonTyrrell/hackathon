@@ -4,6 +4,7 @@ const caminhoneiroController = require('./controllers/caminhoneiroController');
 const caminhaoController = require('./controllers/caminhaoController');
 const loginController = require('./controllers/loginController');
 const paradasController = require('./controllers/paradasController');
+const paradasproximasController = require('./controllers/paradasProximasController');
 
 const routes = express.Router();
 
@@ -19,7 +20,10 @@ routes.delete('/caminhao', caminhaoController.delete);
 //API do Login // Ainda não terminado
 routes.post('/login', loginController.create);
 
-//API de criação das paradas
+//API de criação das paradas e listagem
 routes.post('/paradas', paradasController.create);
+routes.get('/paradas', paradasController.index);
+
+routes.get('/paradasproximas', paradasproximasController.postosPertos)
 
 module.exports = routes;
