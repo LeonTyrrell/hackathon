@@ -34,4 +34,3 @@ module.exports = {
         await database('caminhoneiro').where('id', id).delete();
     }
 };
-//teste
