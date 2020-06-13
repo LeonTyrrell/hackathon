@@ -23,6 +23,7 @@ routes.post('/login', loginController.create);
 //API de criação das paradas e listagem
 routes.post('/paradas', paradasController.create);
 routes.get('/paradas', paradasController.index);
+routes.delete('/paradas', paradasController.delete);
 
 routes.get('/paradasproximas', paradasproximasController.postosPertos)
 
