@@ -5,10 +5,12 @@ exports.up = function(knex) {
         table.string('nome').notNullable();
         table.decimal('latitude').notNullable();
         table.decimal('longitude').notNullable();
-        table.decimal('estacionamento').notNullable();
-        table.decimal('banho').notNullable();
-        table.decimal('refeicao').notNullable();
-        table.decimal('seguranca').notNullable();
+        table.boolean('autoeletrica').notNullable();
+        table.boolean('borracharia').notNullable();
+        table.boolean('estacionamento').notNullable();
+        table.boolean('banho').notNullable();
+        table.boolean('refeicao').notNullable();
+        table.boolean('seguranca').notNullable();
       })
 };
 
