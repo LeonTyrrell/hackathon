@@ -5,13 +5,16 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 const AppStack = createStackNavigator();
 
-import PaginaInicial from './pages/PaginaInicial';
+import Cadastro from './pages/Cadastro';
+import Mapa from './pages/Mapa';
 
 export default function Routes() {
     return (
         <NavigationContainer>
             <AppStack.Navigator screenOptions={{headerShown: false}}>
-               <AppStack.Screen name="Pagina Inicial" component= {PaginaInicial} />
+               <AppStack.Screen name="Cadastro" component= {Cadastro} />
+               <AppStack.Screen name="Mapa" component= {Mapa} />
+               
             </AppStack.Navigator>
         </NavigationContainer>
     )
