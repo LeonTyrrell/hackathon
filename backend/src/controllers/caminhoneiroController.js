@@ -16,7 +16,7 @@ module.exports = {
             telefone
         })
 
-        return response.json({id});
+        return response.json({ id });
     },
 
     async delete(request, response) {
