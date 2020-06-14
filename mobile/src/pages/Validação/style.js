@@ -7,14 +7,27 @@ export default StyleSheet.create({
         paddingTop: Constants.statusBarHeight + 20
     },
     header: {
-        flexDirection: "column",
+        flexDirection: "row",
         justifyContent: "center",
-        alignItems: "flex-end",
+        alignItems: "center",
     },
     headerText: {
         fontSize: 20,
         textAlign: "center"
     },
-    
+    title: {
+        fontWeight: "bold",
+        marginBottom: 16,
+        marginTop: 48,
+        color: "#13131a",
+        fontSize: 30,
+    },
+    cadastro: {
+        color: "#737380"
+    },
+    formCadastro: {
+        marginTop: 30,
+        marginLeft: -10
+    }
 
 })

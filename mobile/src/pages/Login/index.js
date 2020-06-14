@@ -9,7 +9,7 @@ import styles from "./style";
 import api from "../../services/api";
 
 
-export default function Cadastro(){
+export default function Login(){
 
     const navigation = useNavigation();
 

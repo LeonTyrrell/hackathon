@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import {View, Image, Text, ScrollView} from 'react-native';
-import MapView from 'react-native-maps';
 import logoImg from "../../assets/icon.png";
 
 // import MapBoxGL from '@react-native-mapbox-gl/maps'

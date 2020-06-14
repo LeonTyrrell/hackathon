@@ -9,7 +9,7 @@ import styles from "./style";
 import api from "../../services/api";
 
 
-export default function Cadastro(){
+export default function DicasSaude(){
 
     const navigation = useNavigation();
 
@@ -17,13 +17,12 @@ export default function Cadastro(){
         navigation.navigate("Mapa")
     }
 
-    cadastrar = async() => {
+    function cadastrar(){
         const response = api.post('/caminhoneiro', {
             nome: nome,
             data_nascimento: data_nascimento,
             telefone: telefone
-        });
-
+        })
     }; 
 
     return (

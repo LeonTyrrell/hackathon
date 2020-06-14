@@ -7,14 +7,22 @@ export default StyleSheet.create({
         paddingTop: Constants.statusBarHeight + 20
     },
     header: {
-        flexDirection: "column",
+        flexDirection: "row",
         justifyContent: "center",
-        alignItems: "flex-end",
+        alignItems: "center",
     },
     headerText: {
         fontSize: 20,
         textAlign: "center"
     },
-    
+    title: {
+        textAlign: "center",
+        fontWeight: "bold",
+        marginBottom: 16,
+        marginTop: 15,
+        color: "#13131a",
+        fontSize: 30,
+    },
+
 
 })
