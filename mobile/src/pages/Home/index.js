@@ -1,8 +1,9 @@
 import React, {useState, useEffect, Component} from 'react';
 import {View, Image, Text, ScrollView} from 'react-native';
-import { Input, Button, Icon } from 'react-native-elements';
+import { Input, Button } from 'react-native-elements';
 import logoImg from "../../assets/icon.png";
 import { useNavigation } from "@react-navigation/native"
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 import styles from "./style";
@@ -28,7 +29,7 @@ export default function Home(){
         <Text style={styles.title}>Bem-vindo ao {"\n"} Parada Certa!</Text>
         
         <View style={{marginTop: 100}}>
-            <Button title="Login" onPress={navigationToLogin}></Button>
+            <Button icon={<Icon name="user" size={20} color="white" />} title="Login" onPress={navigationToLogin}></Button>
         </View>
         <View style={{marginTop: 20}}>
             <Button title="Cadastro" onPress={navigationToCadastro}></Button>
