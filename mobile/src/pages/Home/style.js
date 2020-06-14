@@ -25,7 +25,8 @@ export default StyleSheet.create({
     },
     login: {
         fontSize: 20,
-        color: "#737380"
+        color: "#737380",
+        marginTop: 20,
     },
     formLogin: {
         marginTop: 30,
