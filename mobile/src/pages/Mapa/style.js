@@ -1,5 +1,6 @@
-import {StyleSheet} from "react-native";
+import {StyleSheet, Dimensions} from "react-native";
 import Constants from "expo-constants";
+
 export default StyleSheet.create({
     container: {
         flex: 1,
@@ -22,10 +23,20 @@ export default StyleSheet.create({
         paddingBottom: 20,
         flex: 1,
     },
-    logoSaude: {
-        maxWidth: 5,
-        marginTop: -500
+    containerMapa: {
+        flex: 5.5,
+        height: '100%',
+        borderRadius: 10,
+        overflow: 'hidden',
+        marginTop: 16,
+        paddingBottom: 16,
+    },
+    styleMapa: {
+        width: '100%',
+        height: '100%',
+    },
+    marcadorMapaIcon: {
+        width: 40,
+        height: 40,
     }
-    
-
 })
