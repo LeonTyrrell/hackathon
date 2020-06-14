@@ -27,31 +27,17 @@ export default function Cadastro(){
         try {
             const response = await api.post('/caminhoneiro', {
                 nome: nome,
-                data_nascimento: data_nascimento,
-                telefone: telefone
+                data_nascimento: data_nascimento
             });
             const { id } = response.data;
             console.log(id)
             navigationToMap();
         } catch (response) {
             //this.setState = ({ errorMessage: response.data.error });
-            console.log(response.status); // deixado para a próxima atualização
+            console.log(response.data);
         }
 
     }; 
-    /*signIn = async () => {
-        try {
-            const response = await api.post('/caminhoneiro', {
-                nome: nome,
-                data_nascimento: data_nascimento,
-                telefone: telefone
-            });
-
-            const { id } = response.data;
-            console.log(id);
-        }
-
-    }*/
 
     return (
     <View style={styles.container}>

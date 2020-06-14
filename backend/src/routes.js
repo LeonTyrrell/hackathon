@@ -11,7 +11,7 @@ const routes = express.Router();
 
 // APIs de caminhoneiros
 routes.post('/caminhoneiro', caminhoneiroController.create);
-routes.get('/caminhoneiro', caminhoneiroController.index);
+routes.get('/caminhoneiro/:id', caminhoneiroController.index);
 
 //API dos caminhões
 routes.post('/caminhao', caminhaoController.create);

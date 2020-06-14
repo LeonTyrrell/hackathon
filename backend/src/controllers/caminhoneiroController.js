@@ -2,9 +2,13 @@ const database = require('../database/connection')
 
 module.exports = {
     async index(request,response) {
-        const caminhoneiros = await database('caminhoneiro').select('*');
-
-        return response.json(caminhoneiros)
+        const telefone = request.params.id;
+        const caminhoneiros = await database('caminhoneiro')
+            .where('telefone', telefone)
+            .select('id')
+            
+        if(caminhoneiros == '' || caminhoneiros == null) return response.status(401).json({ Error: "Huum.. Vi que não existe esse telefone em nosso banco de dados, você pode ter digitado errado ou ainda não possui um cadastro" })
+        return response.json(caminhoneiros);
     },
 
     async create(request, response) {

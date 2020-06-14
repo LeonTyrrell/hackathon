@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import {View, Image, Text, TouchableOpacity} from 'react-native';
-import logoTelefone from "../../assets/emergency.png"
+import {View, Image, Text, TouchableOpacity, Linking} from 'react-native';
+import logoImg from "../../assets/icon.png";
 import { useNavigation } from "@react-navigation/native"
 
 import styles from "./style";
@@ -12,7 +12,19 @@ import ccr from "../../assets/customer-service.png"
 
 export default function Telefones(){
 
+
+
     const navigation = useNavigation();
+
+    function ccrNovaDutra(){
+        Linking.openURL(`tel:08000173536`)
+    };
+    function resgate(){
+        Linking.openURL(`tel:192`)
+    };
+    function bombeiros(){
+        Linking.openURL(`tel:193`)
+    };
 
     function navigationToLocais(){
         navigation.navigate("Locais")
@@ -29,19 +41,19 @@ export default function Telefones(){
     return (
     <View style={styles.container}>
         <View style={styles.header}>
-            <Image style={styles.logo} source={logoTelefone}/>
+            <Image style={styles.Logo} source={logoImg} />
         </View>
         <Text style={styles.title}>Emergência</Text>
         <View style={styles.footerButtons}>
-            <TouchableOpacity onPress={navigationToTelefones} style={ {flexDirection:'row', flexWrap:'wrap' }}>
+            <TouchableOpacity onPress={ccrNovaDutra} style={ {flexDirection:'row', flexWrap:'wrap' }}>
                 <Image source={ccr} style={{ width: 65, height: 65, marginTop: 25}}/>
                 <Text style={{marginLeft: 25, marginTop: 30, fontSize: 20}}>CCR NovaDutra {"\n"} 0800 0173536</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={navigationToSaude} style={ {flexDirection:'row', flexWrap:'wrap' }}>
+            <TouchableOpacity onPress={resgate} style={ {flexDirection:'row', flexWrap:'wrap' }}>
                 <Image source={ambulancia} style={{ width: 65, height: 65, marginTop: 50}}/>
                 <Text style={{marginLeft: 25, marginTop: 70, fontSize: 20}}>Resgate - 192</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={navigationToSaude} style={ {flexDirection:'row', flexWrap:'wrap' }}>
+            <TouchableOpacity onPress={bombeiros} style={ {flexDirection:'row', flexWrap:'wrap' }}>
                 <Image source={bombeiro} style={{ width: 65, height: 65, marginTop: 50}}/>
                 <Text style={{marginLeft: 25, marginTop: 70, fontSize: 20}}> Bombeiros - 193</Text>
             </TouchableOpacity>
