@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, Image, Text, TouchableOpacity, ScrollView} from 'react-native';
+import { View, Image, Text, TouchableOpacity, ScrollView, Alert } from 'react-native';
 import logoImg from "../../assets/icon.png";
 import logoSaude from "../../assets/health.png"
 import logoLocal from "../../assets/location.png"
@@ -8,6 +8,7 @@ import marcadorMapa from "../../assets/sleep.png"
 import { useNavigation } from "@react-navigation/native"
 import Constants from 'expo-constants';
 import Mapview, { Marker } from 'react-native-maps';
+import * as Location from 'expo-location';
 
 // import MapBoxGL from '@react-native-mapbox-gl/maps'
 
@@ -18,6 +19,29 @@ import api from "../../services/api";
 export default function Mapa(){
 
     const navigation = useNavigation();
+
+    const [posicaoInicial, setPosicaoInicial] = useState([Number, Number]>[0, 0]);
+
+    useEffect (() => {
+        async function loadPosition () {
+            const { status } = await Location.requestPermissionsAsync();
+
+            if (status !== "garanted") {
+                Alert.alert('Não foi possível obter a sua localização. Verifique as permissões para prosseguir');
+                return
+            }
+
+            const Localizacao = await Location.getCurrentPositionAsync();
+
+            const {latitude, longitude} = location.coords;
+
+            setPosicaoInicial([
+                latitude,
+                longitude
+            ])
+        }
+
+    }, []);
 
     function navigationToLocais(){
         navigation.navigate("Locais")
@@ -38,12 +62,13 @@ export default function Mapa(){
                     <Image style={styles.Logo} source={logoImg} />
                 </View>
                 <View style={styles.containerMapa}>
-                    <View>
+                    { posicaoInicial[0] !== 0 && (
+                        <View>
                         <Mapview 
                             style={styles.styleMapa}
                             initialRegion={{
-                                latitude: -23.621239,
-                                longitude: -46.598182,
+                                latitude: posicaoInicial[0],
+                                longitude: posicaoInicial[1],
                                 latitudeDelta: 0.008,
                                 longitudeDelta: 0.008,
                             }}
@@ -58,6 +83,7 @@ export default function Mapa(){
                             </Marker> 
                         </Mapview>
                     </View>
+                    )}
                 </View>
                 <View style={styles.footerButtons}>
                     <TouchableOpacity onPress={navigationToLocais}>
