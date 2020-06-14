@@ -16,18 +16,15 @@ export default StyleSheet.create({
         textAlign: "center"
     },
     title: {
+        textAlign: "center",
         fontWeight: "bold",
         marginBottom: 16,
         marginTop: 48,
         color: "#13131a",
         fontSize: 30,
     },
-    cadastro: {
-        color: "#737380"
-    },
-    formCadastro: {
-        marginTop: 30,
-        marginLeft: -10
+    bottom: {
+        marginTop: 40,
     }
 
 })

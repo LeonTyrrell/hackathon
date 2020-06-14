@@ -18,8 +18,9 @@ export default StyleSheet.create({
     footerButtons: {
         flexDirection: "row",
         justifyContent: "center",
-        alignItems: "center",
-        marginTop: 350,
+        alignItems: "flex-end",
+        paddingBottom: 20,
+        flex: 1,
     },
     logoSaude: {
         maxWidth: 5,
