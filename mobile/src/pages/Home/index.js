@@ -29,10 +29,10 @@ export default function Home(){
         <Text style={styles.title}>Bem-vindo ao {"\n"} Parada Certa!</Text>
         
         <View style={{marginTop: 100}}>
-            <Button icon={<Icon name="user" size={20} color="white" />} title="Login" onPress={navigationToLogin}></Button>
+            <Button icon={<Icon name="user" size={20} color="white" style={{marginRight: 10, marginLeft: -25}}/>} title="Login" onPress={navigationToLogin}></Button>
         </View>
         <View style={{marginTop: 20}}>
-            <Button title="Cadastro" onPress={navigationToCadastro}></Button>
+            <Button icon={<Icon name="user-plus" size={20} color="white" style={{marginRight: 10}}/>} title="Cadastro" onPress={navigationToCadastro}></Button>
         </View>
         
     </View>

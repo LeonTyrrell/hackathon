@@ -25,7 +25,7 @@ export default StyleSheet.create({
     cadastro: {
         color: "#737380"
     },
-    formCadastro: {
+    formLogin: {
         marginTop: 30,
         marginLeft: -10
     }
