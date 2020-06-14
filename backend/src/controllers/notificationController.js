@@ -1,9 +1,8 @@
-import Notifications from '../services/Notification';
 import Notification from '../services/Notification';
 
 const App = () => {
     Notification.configure().localNotification({
-        message: 'Obrigado pelo cadastro!',
+        message: 'Cadastro realizado com sucesso!',
         actions: ''
     });
 }
