@@ -1,7 +1,7 @@
 import React, {useState, useEffect, Component} from 'react';
 import {View, Image, Text, ScrollView} from 'react-native';
 import { Input, Button } from 'react-native-elements';
-import logoImg from "../../assets/icon.png";
+import logoSaude from "../../assets/health.png"
 import { useNavigation } from "@react-navigation/native"
 
 
@@ -13,24 +13,30 @@ export default function Saude(){
 
     const navigation = useNavigation();
 
-    function navigationToMap(){
-        navigation.navigate("Mapa")
+    function navigationToLombar(){
+        navigation.navigate("Lombar")
+    }
+    function navigationToMembros(){
+        navigation.navigate("MemSuperiores")
+    }
+    function navigationToCervical(){
+        navigation.navigate("Cervical")
     }
 
     return (
     <View style={styles.container}>
         <View style={styles.header}>
-            <Image style={styles.Logo} source={logoImg} />
+            <Image style={styles.logo} source={logoSaude} />
         </View>
         <Text style={styles.title}>Dicas de Saúde</Text>
         <View style={styles.bottom}>
-            <Button title="Dores na Lombar" onPress={navigationToMap}></Button>
+            <Button title="Dores na Lombar" onPress={navigationToLombar}></Button>
         </View>
         <View style={styles.bottom}>
-            <Button title="Dores nos Membros Superiores" onPress={navigationToMap}></Button>
+            <Button title="Dores nos Membros Superiores" onPress={navigationToMembros}></Button>
         </View>
         <View style={styles.bottom}>
-            <Button title="Confirmar" onPress={navigationToMap}></Button>
+            <Button title="Dores na Cervical" onPress={navigationToCervical}></Button>
         </View>
     </View>
     );

@@ -25,6 +25,10 @@ export default StyleSheet.create({
     },
     bottom: {
         marginTop: 40,
+    },
+    logo: {
+        width: 65, 
+        height: 65,
     }
 
 })

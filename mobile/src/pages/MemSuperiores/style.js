@@ -19,18 +19,12 @@ export default StyleSheet.create({
         textAlign: "center",
         fontWeight: "bold",
         marginBottom: 16,
-        marginTop: 15,
+        marginTop: 48,
         color: "#13131a",
         fontSize: 30,
     },
-    footerButtons: {
-        flexDirection: "column",
-        justifyContent: "center",
-        marginLeft: 30
-    },
-    logo: {
-        width: 65, 
-        height: 65,
+    bottom: {
+        marginTop: 40,
     }
 
 })

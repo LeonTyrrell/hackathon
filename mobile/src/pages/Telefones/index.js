@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {View, Image, Text, TouchableOpacity} from 'react-native';
-import logoImg from "../../assets/icon.png";
+import logoTelefone from "../../assets/emergency.png"
 import { useNavigation } from "@react-navigation/native"
 
 import styles from "./style";
@@ -29,7 +29,7 @@ export default function Telefones(){
     return (
     <View style={styles.container}>
         <View style={styles.header}>
-            <Image style={styles.Logo} source={logoImg} />
+            <Image style={styles.logo} source={logoTelefone}/>
         </View>
         <Text style={styles.title}>Emergência</Text>
         <View style={styles.footerButtons}>

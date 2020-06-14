@@ -12,7 +12,11 @@ import Login from "./pages/Login";
 import Validacao from "./pages/Validacao";
 import Telefones from "./pages/Telefones";
 import Saude from "./pages/Saude";
-import Restaurantes from "./pages/Restaurantes";
+import Locais from "./pages/Locais";
+import Lombar from "./pages/Lombar";
+import Cervical from "./pages/Cervical";
+import MemSuperiores from "./pages/MemSuperiores";
+
 
 
 export default function Routes() {
@@ -26,7 +30,10 @@ export default function Routes() {
                <AppStack.Screen name="Mapa" component= {Mapa} />
                <AppStack.Screen name="Telefones" component= {Telefones} />
                <AppStack.Screen name="Saude" component= {Saude} />
-               <AppStack.Screen name="Restaurante" component= {Restaurantes} />
+               <AppStack.Screen name="Locais" component= {Locais} />
+               <AppStack.Screen name="Lombar" component= {Lombar} />
+               <AppStack.Screen name="Cervical" component= {Cervical} />
+               <AppStack.Screen name="MemSuperiores" component= {MemSuperiores} />
             </AppStack.Navigator>
         </NavigationContainer>
     )
