@@ -12,6 +12,7 @@ import api from "../../services/api";
 export default function Home(){
     const [ telefone, setTelefone ] = useState('');
 
+
     const navigation = useNavigation();
 
     function navigationToValidacao(){
@@ -23,7 +24,9 @@ export default function Home(){
     const logar = async ()=> {
         try {
             const response = await api.get('/caminhoneiro/' + telefone);
-            const { id } = response.data;
+            const [{id}] = response.data;
+            //console.log(id);
+            console.log(response.status)
             navigationToValidacao();
         } catch (response) {
             console.log(response.data);
