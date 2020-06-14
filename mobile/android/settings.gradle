@@ -1,4 +1,8 @@
 rootProject.name = 'mobile'
+include ':@mypharma_react-native-text-input-mask'
+project(':@mypharma_react-native-text-input-mask').projectDir = new File(rootProject.projectDir, '../node_modules/@mypharma/react-native-text-input-mask/android')
+include ':react-native-text-input-mask'
+project(':react-native-text-input-mask').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-text-input-mask/android')
 
 apply from: '../node_modules/react-native-unimodules/gradle.groovy'
 includeUnimodulesProjects()
@@ -8,5 +12,5 @@ applyNativeModulesSettingsGradle(settings)
 
 include ':app'
 
-include ':react-native-maps'
-project(':react-native-maps').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-maps/lib/android')
+include ':@react-native-mapbox-gl_maps'
+project(':@react-native-mapbox-gl_maps').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-mapbox-gl/maps/android/rctmgl')

@@ -3,6 +3,8 @@ import {View, Image, Text, ScrollView} from 'react-native';
 import MapView from 'react-native-maps';
 import logoImg from "../../assets/icon.png";
 
+// import MapBoxGL from '@react-native-mapbox-gl/maps'
+
 import styles from "./style";
 import api from "../../services/api";
 
@@ -22,15 +24,12 @@ export default function Mapa(){
         <View style={styles.header}>
             <Image style={styles.Logo} source={logoImg} />
         </View>
-        <Text style={styles.title}>Mapa</Text>
-        <MapView
-            initialRegion={{
-            latitude: 37.78825,
-            longitude: -122.4324,
-            latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421,
-            }}
-        />
+    {/* <MapBoxGL.MapView style={{ flex: 1 }} styleURL={MapBoxGL.StyleURL.Dark}>
+            <MapBoxGL.Camera 
+            centerCoordinate={[-95.099215, 29.583299]}
+            zoomLevel={11}
+            />
+        </MapBoxGL.MapView> */}
     </View>
     
 
