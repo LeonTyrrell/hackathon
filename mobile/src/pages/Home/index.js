@@ -14,8 +14,8 @@ export default function Home(){
 
     const navigation = useNavigation();
 
-    function navigationToLogin(){
-        navigation.navigate("Login")
+    function navigationToVerificaCod(){
+        navigation.navigate("VerificaCod")
     }
     function navigationToCadastro(){
         navigation.navigate("Cadastro")
@@ -27,16 +27,16 @@ export default function Home(){
             <Image style={styles.Logo} source={logoImg} />
         </View>
         <Text style={styles.title}>Bem-vindo ao {"\n"} Parada Certa!</Text>
-        
-        <View style={{marginTop: 100}}>
-            <Button icon={<Icon name="user" size={20} color="white" style={{marginRight: 10, marginLeft: -25}}/>} title="Login" onPress={navigationToLogin}></Button>
+        <Text style={styles.login}>Login:</Text>
+        <View style={styles.formLogin}>
+            <Input placeholder='WhatsApp' leftIcon={{ type: 'font-awesome', name: 'whatsapp' }} keyboardType="number-pad" maxLength = {11}/>
+            <Button title="Entrar" onPress={navigationToVerificaCod}></Button>
         </View>
-        <View style={{marginTop: 20}}>
-            <Button icon={<Icon name="user-plus" size={20} color="white" style={{marginRight: 10}}/>} title="Cadastro" onPress={navigationToCadastro}></Button>
+        <View style={{marginTop: 40}}>
+            <Button type="clear" icon={<Icon name="user-plus" size={20} color="#2089dc" style={{marginRight: 10}}/>} title="Cadastro" onPress={navigationToCadastro}></Button>
         </View>
         
-    </View>
-    
+    </View> 
 
     );
 }
