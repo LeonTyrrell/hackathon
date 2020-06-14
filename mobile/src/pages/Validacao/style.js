@@ -22,8 +22,9 @@ export default StyleSheet.create({
         color: "#13131a",
         fontSize: 30,
     },
-    cadastro: {
-        color: "#737380"
+    textValidacao: {
+        color: "#737380",
+        textAlign: "center"
     },
     formCadastro: {
         marginTop: 30,

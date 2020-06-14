@@ -14,8 +14,8 @@ export default function Home(){
 
     const navigation = useNavigation();
 
-    function navigationToVerificaCod(){
-        navigation.navigate("VerificaCod")
+    function navigationToValidacao(){
+        navigation.navigate("Validacao")
     }
     function navigationToCadastro(){
         navigation.navigate("Cadastro")
@@ -30,7 +30,7 @@ export default function Home(){
         <Text style={styles.login}>Login:</Text>
         <View style={styles.formLogin}>
             <Input placeholder='WhatsApp' leftIcon={{ type: 'font-awesome', name: 'whatsapp' }} keyboardType="number-pad" maxLength = {11}/>
-            <Button title="Entrar" onPress={navigationToVerificaCod}></Button>
+            <Button title="Entrar" onPress={navigationToValidacao}></Button>
         </View>
         <View style={{marginTop: 40}}>
             <Button type="clear" icon={<Icon name="user-plus" size={20} color="#2089dc" style={{marginRight: 10}}/>} title="Cadastro" onPress={navigationToCadastro}></Button>

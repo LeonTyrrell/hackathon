@@ -16,15 +16,7 @@ export default function Restaurantes(){
     function navigationToMap(){
         navigation.navigate("Mapa")
     }
-
-    function cadastrar(){
-        const response = api.post('/caminhoneiro', {
-            nome: nome,
-            data_nascimento: data_nascimento,
-            telefone: telefone
-        })
-    }; 
-
+    
     return (
     <View style={styles.container}>
         <View style={styles.header}>

@@ -23,11 +23,9 @@ export default function Validacao(){
             <Image style={styles.Logo} source={logoImg} />
         </View>
         <Text style={styles.title}>Validação do Número</Text>
-        <Text style={styles.cadastro}>Insira o número </Text>
+        <Text style={styles.textValidacao}>Insira o número de 6 dígitos enviado ao seu Whatsapp!</Text>
         <ScrollView style={styles.formCadastro}>
-            <Input value={cadastrar.nome} placeholder='Nome Completo' leftIcon={{ type: 'font-awesome', name: 'user' }}/>
-            <Input value={cadastrar.data_nascimento} placeholder='Data de Nascimento' leftIcon={{ type: 'font-awesome', name: 'calendar' }} keyboardType="number-pad" maxLength = {8}/>
-            <Input value={cadastrar.telefone} placeholder='WhatsApp' leftIcon={{ type: 'font-awesome', name: 'whatsapp' }} keyboardType="number-pad" maxLength = {11}/>
+            <Input placeholder='Código' leftIcon={{ type: 'font-awesome', name: 'whatsapp' }}/>
             <Button title="Confirmar" onPress={navigationToMap}></Button>
         </ScrollView>
     </View>

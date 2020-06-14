@@ -13,8 +13,8 @@ export default function Login(){
 
     const navigation = useNavigation();
 
-    function navigationToVerificaCod(){
-        navigation.navigate("Mapa")
+    function navigationToValidacao(){
+        navigation.navigate("Validacao")
     }
 
     return (
@@ -25,7 +25,7 @@ export default function Login(){
         <Text style={styles.title}>Login:</Text>
         <View style={styles.formLogin}>
             <Input placeholder='WhatsApp' leftIcon={{ type: 'font-awesome', name: 'whatsapp' }} keyboardType="number-pad" maxLength = {11}/>
-            <Button title="Entrar" onPress={navigationToVerificaCod}></Button>
+            <Button title="Entrar" onPress={navigationToValidacao}></Button>
         </View>
     </View>
     
