@@ -14,7 +14,9 @@
     "electron": "^9.0.4",
     "express": "^4.17.1",
     "knex": "^0.21.1",
-    "sqlite3": "^4.2.0"
+    "node-fetch": "^2.6.0",
+    "sqlite3": "^4.2.0",
+    "twilio": "^3.46.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"

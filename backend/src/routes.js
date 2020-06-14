@@ -5,6 +5,7 @@ const caminhaoController = require('./controllers/caminhaoController');
 const loginController = require('./controllers/loginController');
 const paradasController = require('./controllers/paradasController');
 const paradasproximasController = require('./controllers/paradasProximasController');
+const whatsappController = require('./controllers/whatsappController');
 
 const routes = express.Router();
 
@@ -25,6 +26,11 @@ routes.post('/paradas', paradasController.create);
 routes.get('/paradas', paradasController.index);
 routes.delete('/paradas', paradasController.delete);
 
-routes.get('/paradasproximas', paradasproximasController.postosPertos)
+routes.get('/paradasproximas', paradasproximasController.postosPertos);
+
+//whatsapp
+routes.get('/whats', whatsappController.sendWhats);
+
+
 
 module.exports = routes;
