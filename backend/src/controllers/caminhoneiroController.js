@@ -12,6 +12,7 @@ module.exports = {
         /*
          * Criar verificação para o telefone não ser cadastrado 2 vezes
          */
+        if(telefone == null) return response.status(401).json({ error: "Você deve passar obrigatóriamente o telefone" });
         const [ id ] = await database('caminhoneiro').insert({
             nome,
             data_nascimento,
