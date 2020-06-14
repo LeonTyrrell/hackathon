@@ -22,7 +22,17 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
-    }
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mobile.mobile",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.mobile.mobile",
+      "versionCode": 1,
+      "config": {
+        "googleMaps": { "apiKey": "AIzaSyB4smlIJZERFxclYIeALN-A-G-V_jm1zr0" }   
+     }
+    },
+    "entryPoint": "node_modules/expo/AppEntry.js"
   }
 }
