@@ -27,7 +27,8 @@ export default function Cadastro(){
         try {
             const response = await api.post('/caminhoneiro', {
                 nome: nome,
-                data_nascimento: data_nascimento
+                data_nascimento: data_nascimento,
+                telefone: telefone
             });
             const { id } = response.data;
             console.log(id)
