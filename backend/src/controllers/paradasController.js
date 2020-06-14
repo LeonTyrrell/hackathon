@@ -38,5 +38,13 @@ module.exports = {
         const paradas = await database('pontodeparada').select('*');
 
         return response.json({paradas})
+    },
+
+    async delete(request, response) {
+        const { id } = request.params();
+        
+        await database('paradas').where('id', id).delete();
+
+        return response.status(204).send();
     }
 }

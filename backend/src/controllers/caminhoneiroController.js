@@ -9,7 +9,9 @@ module.exports = {
 
     async create(request, response) {
         const { nome, data_nascimento, telefone } = request.body;
-
+        /*
+         * Criar verificação para o telefone não ser cadastrado 2 vezes
+         */
         const [ id ] = await database('caminhoneiro').insert({
             nome,
             data_nascimento,
