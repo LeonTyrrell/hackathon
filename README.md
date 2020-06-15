@@ -48,11 +48,11 @@ Por fim, para complementar as notificações enviadas, há uma sessão do aplica
 
 ### Informações importantes pra testar:
 
-**Configurações de ambiente:**
+#### Configurações de ambiente:
 - Acessar o Windows PowerShell como Admin e executar o seguinte comando:
 Set-ExecutionPolicy RemoteSigned
 
-**Instalação de dependências:**
+#### Instalação de dependências:
 > Globais
 - Executar o comando **npm install -g expo-cli** no terminal
 - Executar o comando **npm install -g react-native-cli** no terminal
@@ -63,15 +63,15 @@ Set-ExecutionPolicy RemoteSigned
 > /mobile
 - Executar o comando **expo install** na pasta */mobile*
 
-**Para executar a aplicação:**
+#### Para executar a aplicação:
 - Executar o comando **npm start** na pasta */backend*
 - Executar o comando **expo start** na pasta */mobile*
 
 
-**Informações adicionais potencialmente úteis:**
-> Se você squisr testar a aplicação diretamente em seu celular, será necerssário que instale o **Expo Client** a partir da sua loja de aplicativos.
+#### Informações adicionais potencialmente úteis:
+> Se você quiser testar a aplicação diretamente em seu celular, será necessário que instale o **Expo Client** a partir da sua loja de aplicativos.
 
-> Não se esqueça que é necessário um interpretador de [NodeJS](http://https://nodejs.org/en/docs/ "NodeJS") e [React Native](https://pt-br.reactjs.org/ "React Native") para executar todos os comandos sem maiores problemas.
+> Não se esqueça que é necessário um interpretador de [NodeJS](http://https://nodejs.org/en/docs/ "NodeJS") e [React Native](https://pt-br.reactjs.org/ "React Native") para executar todos os comandos.
 ------------
 
 ### Outros links Úteis:
