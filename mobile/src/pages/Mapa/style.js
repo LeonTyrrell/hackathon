@@ -8,9 +8,10 @@ export default StyleSheet.create({
         paddingTop: Constants.statusBarHeight + 20
     },
     header: {
-        flexDirection: "column",
-        justifyContent: "center",
+        flexDirection: "row",
+        justifyContent: "space-between",
         alignItems: "flex-end",
+
     },
     headerText: {
         fontSize: 20,
@@ -38,5 +39,12 @@ export default StyleSheet.create({
     marcadorMapaIcon: {
         width: 40,
         height: 40,
-    }
+    },
+    title: {
+        fontWeight: "bold",
+        marginBottom: 16,
+        marginTop: 48,
+        color: "#13131a",
+        fontSize: 30,
+    },
 })

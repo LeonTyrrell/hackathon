@@ -35,6 +35,7 @@ export default function Mapa(){
         <>
             <View style={styles.container}>
                 <View style={styles.header}>
+                    <Text style={styles.title}>Parada Certa</Text>
                     <Image style={styles.Logo} source={logoImg} />
                 </View>
                 <View style={styles.containerMapa}>
