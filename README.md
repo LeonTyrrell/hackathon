@@ -25,6 +25,8 @@
 
 * Yarn
 
+* Nodemon
+
 ------------
 
 > **Avisos importantes:**
@@ -38,9 +40,44 @@ Após um determinado tempo de viagem, o aplicativo começa a notificar o caminho
 
 Além desses dados, há uma sessão de telefones de emergência para casos de acidentes ou quebra do caminhão, que redirecionam diretamente ao discador do celular.
 
-Como o próposito da iniciativa é melhorar a saúde desses profissionais, incluirmos notificações para, aos poucos,  conscientizá-los da importância e do benefício de algumas pequenas atitudes diárias.
+Como o propósito da iniciativa é melhorar a saúde desses profissionais, incluirmos notificações para, aos poucos,  conscientizá-los da importância e do benefício de algumas pequenas atitudes diárias.
 
 Por fim, para complementar as notificações enviadas, há uma sessão do aplicativo apenas com dicas e vídeos curtos instrutivos de exercícios e alongamentos para ajudá-los no processo de mudança de hábitos.
 
+------------
 
+### Informações importantes pra testar:
+
+**Configurações de ambiente:**
+- Acessar o Windows PowerShell como Admin e executar o seguinte comando:
+Set-ExecutionPolicy RemoteSigned
+
+**Instalação de dependências:**
+> Globais
+- Executar o comando **npm install -g expo-cli** no terminal
+- Executar o comando **npm install -g react-native-cli** no terminal
+
+> /backend
+- Executar o comando **npm install** na pasta */backend*
+
+> /mobile
+- Executar o comando **expo install** na pasta */mobile*
+
+**Para executar a aplicação:**
+- Executar o comando **npm start** na pasta */backend*
+- Executar o comando **expo start** na pasta */mobile*
+
+
+**Informações adicionais potencialmente úteis:**
+> Se você squisr testar a aplicação diretamente em seu celular, será necerssário que instale o **Expo Client** a partir da sua loja de aplicativos.
+
+> Não se esqueça que é necessário um interpretador de [NodeJS](http://https://nodejs.org/en/docs/ "NodeJS") e [React Native](https://pt-br.reactjs.org/ "React Native") para executar todos os comandos sem maiores problemas.
+------------
+
+### Outros links Úteis:
+- [Express](https://expressjs.com/ "Express")
+- [Leaflet](https://leafletjs.com/ "Leaflet")
+- [Nodemon](https://nodemon.io/ "Nodemon")
+- [Twillio API](https://www.twilio.com/docs/whatsapp/api "Twillio API")
+- [SQLite](https://www.sqlite.org/index.html "SQLite")
 ------------
